@@ -22,7 +22,7 @@
         console.log("ID de Carlos: " + idAlumne);
     })
 
-    function postAlumne(nom) {
+    function postFormulari(name,email,phone,subject,message) {
         fetch(url + project + database, {
             method: 'POST',
             body: JSON.stringify({nom})
