@@ -260,7 +260,7 @@ h3 {
   color: #777;
 }
 
-.form-container {
+ .form-container {
   background: url(map-image1.png) no-repeat center center / cover;
   background-size: cover;
   background-color: #75639a;
@@ -284,16 +284,12 @@ form h1 {
 }
 
 form label {
-  /* display: inline-block;*/
-  /*width: 80px;*/
   text-align: left;
   float: left;
 }
 
 form input,
 form textarea {
-  /*display: block;*/
-  /*margin-bottom: 15px;*/
   padding: 10px;
   border-color: white;
   border-radius: 5px;
@@ -322,6 +318,18 @@ form button {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  position: relative; /*Mantenir la relació de cada input amb el missatge d'error*/
+  margin-bottom: 25px; /* Afegir marge inferior per reservar espai per al missatge d'error*/
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 100%; /* Assegura que els inputs mantinguin l'amplada*/
+  box-sizing: border-box; /* Per el padding i el border no afectin l'amplada total */
+  transition: border-color 0.3s ease; /* Suavitza el canvi de color a les vores */
 }
 
 .form-group label {
@@ -350,6 +358,63 @@ form button {
 form button:hover {
   background-color: #b0adb4;
 }
+
+/* Estils generals del formulari */
+.form-group {
+  position: relative; /* Relaciona l'input amb seu missatge d'error */
+  margin-bottom: 40px; /* Asegura que hi ha espai suficient per el missatge d'error */
+}
+
+input.error,
+textarea.error {
+  border-color: rgb(145, 25, 25); /* Bordes vermells quan hi ha un error */
+}
+
+input.success,
+textarea.success {
+  border-color: rgb(
+    27,
+    226,
+    27
+  ); /* Bordes verds quan la validacio es correcta */
+}
+
+/* Mensajes de error */
+.error-message {
+  color: rgb(87, 5, 5);
+  font-size: 12px;
+  position: absolute; /* Col·loca el missatge d'error sota l'input sense modificar el layout */
+  bottom: -20px; /* Ajusta la posició del missatge just a sota de l'input */
+  left: 0;
+  display: none; /*Oculta el missatge d'error per defecte */
+}
+
+/* Errors visibles */
+input.error + .error-message,
+textarea.error + .error-message {
+  display: block; /* Només mostra el missatge d'error quan el camp té un error */
+}
+
+/* Modal per a l'alerta d'enviament de formulari */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /*ajusta la posició del modal amb les coordenades del top: 50% i left: 50%*/
+  background-color: #5c5a5a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /*z-index: 1000 assegura que el modal estigui a la capa superior sobre qualsevol altre contingut de la pàgina*/
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+} 
 
 footer {
   background-color: #573077;
