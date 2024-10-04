@@ -1,5 +1,5 @@
 // Obtenir els camps del formulari
-const form = document.getElementById('contactForm');
+const form = document.getElementById('dades_formulari');
 const inputs = form.querySelectorAll('input, textarea');
 const modal = document.getElementById('formAlert');
 
