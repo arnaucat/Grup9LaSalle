@@ -72,6 +72,6 @@ form.addEventListener('submit', function (event) {
   }
 });
 
-// Carregar els dades del formulari al inici
-window.onload = loadFormData;
+/*// Carregar els dades del formulari al inici
+window.onload = loadFormData;*/
  
