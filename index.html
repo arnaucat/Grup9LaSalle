@@ -251,7 +251,7 @@
       <section id="contact">
   <section class="form-container">
     <h2>Email Us</h2>
-    <form id="contactForm" action="#" method="POST" novalidate>
+    <form id="dades_formulari" action="#" method="POST" novalidate>
       <div class="form-group">
         <label for="name">Name*:</label>
         <input type="text" id="name" required />
@@ -282,11 +282,14 @@
         <span id="messageError" class="error-message">Aquest camp es requerit</span>
       </div>
 
-      <button type="submit">Send</button>
+      <button type="submit" id="submit">Send</button>
     </form>
     <div id="formAlert" class="modal hidden">
       Formulari ha enviat correctament!
     </div>
+    <div id="response-message" style="display: none; margin-top: 20px;"></div>
+
+          <script src="./js/apiFormulari.js"></script>
   </section>
 </section>
     </main>
@@ -299,5 +302,6 @@
     </footer>
 
     <script src="./js/validacioFormulari.js"></script>
+
   </body>
 </html>
