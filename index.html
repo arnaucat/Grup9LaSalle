@@ -13,7 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="../js/api.js"></script>
+    
+
 
     <title>My Bussiness Webpage</title>
   </head>
@@ -165,15 +166,15 @@
         <h2>Portfolio</h2>
         <h3>There are success project created by us</h3>
         <article class="portfolio-container">
-          <img src="2.jpg" alt="rainy" />
-          <img src="3.jpg" alt="cup of tea" />
-          <img src="4.jpg" alt="lights" />
-          <img src="5.jpg" alt="reading book" />
-          <img src="6.jpg" alt="sit alone" class="image-rotate" />
-          <img src="7.jpg" alt="nuts" />
-          <img src="8.jpg" alt="in the box" />
-          <img src="9.jpg" alt="cookies" />
-          <img src="10.jpg" alt="shampoo" />
+          <img src="media/2.jpg" alt="rainy" />
+          <img src="media/3.jpg" alt="cup of tea" />
+          <img src="media/4.jpg" alt="lights" />
+          <img src="media/5.jpg" alt="reading book" />
+          <img src="media/6.jpg" alt="sit alone" class="image-rotate" />
+          <img src="media/7.jpg" alt="nuts" />
+          <img src="media/8.jpg" alt="in the box" />
+          <img src="media/9.jpg" alt="cookies" />
+          <img src="media/10.jpg" alt="shampoo" />
         </article>
       </section>
 
@@ -230,10 +231,7 @@
       <section id="contact">
         <section class="form-container">
           <h2>Email Us</h2>
-          <form
-            action="https://estudy2324.salle.url.edu/course/view.php?id=1663"
-            method="POST"
-          >
+          <form id='dades_formulari'>
             <div class="form-group">
               <label for="name">Name*:</label>
               <input type="text" id="name" required />
@@ -254,8 +252,13 @@
               <label for="message">Message*:</label>
               <textarea name="message" id="message" required></textarea>
             </div>
-            <button type="submit">Send</button>
+            <button id='submit' type="submit">Send</button>
           </form>
+          <div id="response-message" style="display: none; margin-top: 20px;"></div>
+
+          <script src="./js/apiFormulari.js"></script>
+
+
         </section>
       </section>
     </main>
@@ -268,4 +271,3 @@
     </footer>
   </body>
 </html>
->>>>>>> 1b4e9ce32a12a93c3a1412232cc4a1e6c3773570
