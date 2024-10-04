@@ -249,38 +249,46 @@
       </section>
       
       <section id="contact">
-        <section class="form-container">
-          <h2>Email Us</h2>
-          <form id='dades_formulari'>
-            <div class="form-group">
-              <label for="name">Name*:</label>
-              <input type="text" id="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email*:</label>
-              <input type="email" id="email" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone:</label>
-              <input type="tel" id="phone" />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject*:</label>
-              <input type="text" id="subject" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Message*:</label>
-              <textarea name="message" id="message" required></textarea>
-            </div>
-            <button id='submit' type="submit">Send</button>
-          </form>
-          <div id="response-message" style="display: none; margin-top: 20px;"></div>
+  <section class="form-container">
+    <h2>Email Us</h2>
+    <form id="contactForm" action="#" method="POST" novalidate>
+      <div class="form-group">
+        <label for="name">Name*:</label>
+        <input type="text" id="name" required />
+        <span id="nameError" class="error-message">Aquest camp es requerit</span>
+      </div>
 
-          <script src="./js/apiFormulari.js"></script>
+      <div class="form-group">
+        <label for="email">Email*:</label>
+        <input type="email" id="email" required />
+        <span id="emailError" class="error-message">Si us plau escriu un e-mail valid</span>
+      </div>
 
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required />
+        <span id="phoneError" class="error-message">El número de teléfon ha de ser válid</span>
+      </div>
 
-        </section>
-      </section>
+      <div class="form-group">
+        <label for="subject">Subject*:</label>
+        <input type="text" id="subject" required />
+        <span id="subjectError" class="error-message">Aquest camp es requerit</span>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message*:</label>
+        <textarea id="message" required></textarea>
+        <span id="messageError" class="error-message">Aquest camp es requerit</span>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+    <div id="formAlert" class="modal hidden">
+      Formulari ha enviat correctament!
+    </div>
+  </section>
+</section>
     </main>
     <footer>
       <p>
@@ -289,5 +297,7 @@
         Rights Reserved.
       </p>
     </footer>
+
+    <script src="./js/validacioFormulari.js"></script>
   </body>
 </html>
