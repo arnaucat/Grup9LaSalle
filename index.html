@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,8 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    
-
 
     <title>My Bussiness Webpage</title>
   </head>
@@ -167,36 +164,96 @@
       <section id="portfolio">
         <h2>Portfolio</h2>
         <h3>There are success project created by us</h3>
-        <article class="portfolio-container">
-          <img src="media/2.jpg" alt="rainy" />
-          <img src="media/3.jpg" alt="cup of tea" />
-          <img src="media/4.jpg" alt="lights" />
-          <img src="media/5.jpg" alt="reading book" />
-          <img src="media/6.jpg" alt="sit alone" class="image-rotate" />
-          <img src="media/7.jpg" alt="nuts" />
-          <img src="media/8.jpg" alt="in the box" />
-          <img src="media/9.jpg" alt="cookies" />
-          <img src="media/10.jpg" alt="shampoo" />
-        </article>
-      </section>
 
+        <article class="portfolio-container">
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/9256e809-0507-455d-8bf6-a86a65a94eac/18359.jpg"
+              loading="lazy"
+              alt="rainy"
+            />
+          </div>
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/969e6d86-e93b-46bd-ba26-b0b41ee12f43/18355.jpg"
+              loading="lazy"
+              alt="cup of tea"
+            />
+          </div>
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/5185df7e-e326-42d3-9302-54c801985bdf/18361.jpg"
+              loading="lazy"
+              alt="lights"
+            />
+          </div>
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/3a66753c-483c-4d58-a990-848a19cb4177/18354.jpg"
+              loading="lazy"
+              alt="reading book"
+            />
+          </div>
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/84fce832-78b3-43cd-b353-7b063d7444bb/8519.jpg"
+              loading="lazy"
+              alt="sit alone"
+              class="image-rotate"
+            />
+          </div>
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/d2c7ed79-1d46-40f0-9f02-a81d0865678d/18362.jpg"
+              loading="lazy"
+              alt="nuts"
+            />
+          </div>
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/81c8314b-b80a-45d5-90c1-f92a98934798/18363.jpg"
+              loading="lazy"
+              alt="in the box"
+            />
+          </div>
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/7bc4b246-2083-4ae6-ba68-b1f97bc8f78a/18357.jpg"
+              loading="lazy"
+              alt="cookies"
+            />
+          </div>
+          <div class="blurred-img">
+            <img
+              src="https://i.natgeofe.com/n/ac51b3b7-3a04-481f-8b42-37e068e750aa/18353.jpg"
+              loading="lazy"
+              alt="shampoo"
+            />
+          </div>
+        </article>
+
+        <!-- <article class="portfolio-container">
+          <img src="media/2.jpg" loading="lazy" alt="rainy" />
+          <img src="media/3.jpg" loading="lazy" alt="cup of tea" />
+          <img src="media/4.jpg" loading="lazy" alt="lights" />
+          <img src="media/5.jpg" loading="lazy" alt="reading book" />
+          <img src="media/6.jpg" loading="lazy" alt="sit alone" class="image-rotate" />
+          <img src="media/7.jpg" loading="lazy" alt="nuts" />
+          <img src="media/8.jpg" loading="lazy" alt="in the box" />
+          <img src="media/9.jpg" loading="lazy" alt="cookies" />
+          <img src="media/10.jpg" loading="lazy" alt="shampoo" />
+        </article> -->
+      </section>
 
       <section id="Humor">
         <h2>Humor</h2>
         <h3>Chiste del dia:</h3>
         <article class="portfolio-container">
-          <div id="joke" style="margin-top: 20px; font-size: 1.2em;"></div>
+          <div id="joke" style="margin-top: 20px; font-size: 1.2em"></div>
 
           <script src="./js/apiJoke.js"></script>
-
         </article>
       </section>
-
-
-
-
-
-
 
       <section id="location">
         <h2>Location</h2>
@@ -209,7 +266,6 @@
                 width="600"
                 height="450"
                 allowfullscreen=""
-                loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
@@ -247,51 +303,64 @@
           </aside>
         </section>
       </section>
-      
+
       <section id="contact">
-  <section class="form-container">
-    <h2>Email Us</h2>
-    <form id="dades_formulari" action="#" method="POST" novalidate>
-      <div class="form-group">
-        <label for="name">Name*:</label>
-        <input type="text" id="name" required />
-        <span id="nameError" class="error-message">Aquest camp es requerit</span>
-      </div>
+        <section class="form-container">
+          <h2>Email Us</h2>
+          <form id="dades_formulari" action="#" method="POST" novalidate>
+            <div class="form-group">
+              <label for="name">Name*:</label>
+              <input type="text" id="name" required />
+              <span id="nameError" class="error-message"
+                >Aquest camp es requerit</span
+              >
+            </div>
 
-      <div class="form-group">
-        <label for="email">Email*:</label>
-        <input type="email" id="email" required />
-        <span id="emailError" class="error-message">Si us plau escriu un e-mail valid</span>
-      </div>
+            <div class="form-group">
+              <label for="email">Email*:</label>
+              <input type="email" id="email" required />
+              <span id="emailError" class="error-message"
+                >Si us plau escriu un e-mail valid</span
+              >
+            </div>
 
-      <div class="form-group">
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" required />
-        <span id="phoneError" class="error-message">El número de teléfon ha de ser válid</span>
-      </div>
+            <div class="form-group">
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" required />
+              <span id="phoneError" class="error-message"
+                >El número de teléfon ha de ser válid</span
+              >
+            </div>
 
-      <div class="form-group">
-        <label for="subject">Subject*:</label>
-        <input type="text" id="subject" required />
-        <span id="subjectError" class="error-message">Aquest camp es requerit</span>
-      </div>
+            <div class="form-group">
+              <label for="subject">Subject*:</label>
+              <input type="text" id="subject" required />
+              <span id="subjectError" class="error-message"
+                >Aquest camp es requerit</span
+              >
+            </div>
 
-      <div class="form-group">
-        <label for="message">Message*:</label>
-        <textarea id="message" required></textarea>
-        <span id="messageError" class="error-message">Aquest camp es requerit</span>
-      </div>
+            <div class="form-group">
+              <label for="message">Message*:</label>
+              <textarea id="message" required></textarea>
+              <span id="messageError" class="error-message"
+                >Aquest camp es requerit</span
+              >
+            </div>
 
-      <button type="submit" id="submit">Send</button>
-    </form>
-    <div id="formAlert" class="modal hidden">
-      Formulari ha enviat correctament!
-    </div>
-    <div id="response-message" style="display: none; margin-top: 20px;"></div>
+            <button type="submit" id="submit">Send</button>
+          </form>
+          <div id="formAlert" class="modal hidden">
+            Formulari ha enviat correctament!
+          </div>
+          <div
+            id="response-message"
+            style="display: none; margin-top: 20px"
+          ></div>
 
           <script src="./js/apiFormulari.js"></script>
-  </section>
-</section>
+        </section>
+      </section>
     </main>
     <footer>
       <p>
@@ -303,5 +372,6 @@
 
     <script src="./js/validacioFormulari.js"></script>
 
+    <script src="./js/lazyLoading.js"></script>
   </body>
 </html>

@@ -181,7 +181,7 @@ aside p {
 }
 
 .portfolio-container img {
-  width: 30%;
+  /* width: 30%; */
   margin: 2px;
 }
 
@@ -260,7 +260,7 @@ h3 {
   color: #777;
 }
 
- .form-container {
+.form-container {
   background: url(map-image1.png) no-repeat center center / cover;
   background-size: cover;
   background-color: #75639a;
@@ -414,7 +414,7 @@ textarea.error + .error-message {
 
 .hidden {
   display: none;
-} 
+}
 
 footer {
   background-color: #573077;
@@ -424,4 +424,18 @@ footer {
 }
 footer a {
   color: white;
+}
+
+/* Lazy Loading */
+.blurred-img {
+  background-image: url(media/hi.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blurred-img img {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+.blurred-img.loaded img {
+  opacity: 1;
 }
