@@ -429,3 +429,33 @@ footer {
 footer a {
   color: white;
 }
+
+
+
+/* Estils night mode */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+.dark {
+  --bg-color: #2c2c2c;
+  --text-color: #ffffff;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.35s, color 0.35s;
+  font-family: Arial, sans-serif;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;*/
+}
+#toggleBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* FI Estils night mode */
