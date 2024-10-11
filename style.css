@@ -55,6 +55,7 @@ nav ul li {
   padding-top: 10px;
   border-radius: 10px;
   margin-bottom: 5px;
+  position: relative; /* Necessari per al posicionament del contingut desplegable */
 }
 
 nav ul li a {
@@ -62,6 +63,8 @@ nav ul li a {
   color: white;
   font-size: 1.2em;
   padding: 10px;
+  display: block;
+  padding: 14px 20px;
 }
 
 nav ul li a:hover {
@@ -70,16 +73,47 @@ nav ul li a:hover {
   border-radius: 10%;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #6a1b9a;
+  color: #f2f2f2;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content li a {
+  padding: 12px 16px;
+  color: white;
+}
+
+.dropdown-content li a:hover {
+  background-color: #462397;
+  color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .wrapper {
   margin-top: 0px;
   text-align: center;
   padding: 10px 10px 0 10px;
   margin-bottom: 0;
 }
+
 h2 {
   font-size: 2em;
   text-align: center;
 }
+
 .p-center {
   text-align: center;
   margin-left: 300px;
@@ -107,9 +141,11 @@ aside h3 {
   text-align: left;
   margin-left: 0;
 }
+
 aside p {
   text-align: justify;
 }
+
 .sidebar img {
   display: block;
   margin-left: auto;
@@ -122,9 +158,38 @@ aside p {
   padding-right: 10px;
   margin-left: 20px;
 }
+
 .side h3 {
   text-align: left;
   margin-left: 0;
+}
+
+.accordion {
+  cursor: pointer;
+  background-color: #eee;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion-content {
+  max-height: 0;
+  padding: 0 15px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: max-height 0.4s ease-out, padding 0.2s;
+}
+
+.accordion.active + .accordion-content {
+  max-height: 200px; /* Ajusta segon el contingut */
+  padding: 15px;
 }
 
 .services-wrapper {
@@ -425,11 +490,10 @@ footer {
   text-align: end;
   padding: 10px;
 }
+
 footer a {
   color: white;
 }
-
-/* Estils night mode */
 
 /* Estils night mode */
 #toggleBtn {
@@ -469,6 +533,12 @@ footer a {
   background-color: #3c3c3c;
   color: #f9f9f9;
 }
+.dark .accordion {
+  background-color: #333;
+}
+.dark .accordion-content {
+  background-color: #161616;
+}
 .dark footer {
   background-color: #000;
 }
@@ -483,3 +553,4 @@ footer a {
   background-color: #333;
   border-color: #333;
 }
+/* FI Estils night mode */

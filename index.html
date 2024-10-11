@@ -26,81 +26,81 @@
     <header>
       <h1>My Bussiness Webpage</h1>
       <nav>
-        <ul>
-          <li><a href="#who-we-are">Who We Are?</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#news">Noticies</a></li>
-          <li><a href="#humor">Humor</a></li>
-          <li><a href="#ultimahora">Última hora</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+
+  <ul>
+    <li><a href="#who-we-are">Who We Are?</a></li>
+    <li class="dropdown">
+      <a href="#services" class="dropbtn">Services</a>
+      <ul class="dropdown-content">
+        <li><a href="#service1">Service 1</a></li>
+        <li><a href="#service2">Service 2</a></li>
+        <li><a href="#service3">Service 3</a></li>
+        <li><a href="#service1">Service 4</a></li>
+        <li><a href="#service2">Service 5</a></li>
+        <li><a href="#service3">Service 6</a></li>
+      </ul>
+    </li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#humor">Humor</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
     </header>
 
     <main>
-      <section id="who-we-are">
-        <section class="wrapper">
-          <h2>Who we are?</h2>
-          <div class="p-center">
+    <section id="who-we-are">
+  <section class="wrapper">
+    <h2>Who we are?</h2>
+    <div class="p-center">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt,
+        nisi excepturi consequatur.
+      </p>
+    </div>
+
+    <section class="description">
+      <article class="side">
+        <h3 class="accordion">Lorem ipsum</h3>
+        <div class="accordion-content">
+          <p>
+            <img src="media/1.jpg" alt="image1 fireworks" class="left-side" />
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Officia consequuntur sapiente rem doloribus officiis ratione
+            deserunt exercitationem rerum nobis recusandae corporis, enim
+            fugit ducimus quis amet distinctio.
+          </p>
+        </div>
+      </article>
+
+      <aside>
+        <article class="sidebar">
+          <h3 class="accordion">Lorem ipsum</h3>
+          <div class="accordion-content">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Incidunt, nisi excepturi consequatur.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+              excepturi, ut possimus animi non laborum maiores corrupti fugiat
+              repudiandae? Quaerat, quis.
+            </p>
+            <div class="image-right">
+              <a href="#who-we-are"><img src="media/ad.png" alt="advertise" /></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="sidebar">
+          <h3 class="accordion">Lorem ipsum</h3>
+          <div class="accordion-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Suscipit illo porro totam quae accusantium expedita voluptas
+              nihil repellendus cum.
             </p>
           </div>
-
-          <section class="description">
-            <article class="side">
-              <h3>Lorem ipsum</h3>
-              <p>
-                <img src="media/1.jpg" alt="image1 fireworks" class="left-side" />
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Officia consequuntur sapiente rem doloribus officiis ratione
-                deserunt exercitationem rerum nobis recusandae corporis, enim
-                fugit ducimus quis amet distinctio, excepturi ad.Maxime
-                quibusdam ratione dolorem, sapiente harum, facilis sint fugiat
-                repudiandae illum minus vel quam. Aut quasi nulla sit modi
-                veniam cumque laudantium sed? Odit esse est, qui labore quae ab,
-                nemo quaerat aliquam animi ipsum, praesentium doloremque
-                voluptatum rerum corrupti quia fugiat. Eligendi ut ad ex vel
-                tenetur reprehenderit, praesentium possimus quo modi architecto
-                exercitationem sunt, numquam quas assumenda ipsam. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Impedit, rerum
-                consequuntur, eius id cupiditate ipsa officia deleniti laborum
-                et sequi aspernatur vero animi in perferendis veritatis.
-                Perspiciatis aliquid dolorum labore! Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. oluptates neque.
-              </p>
-            </article>
-
-            <aside>
-              <article class="sidebar">
-                <h3>Lorem ipsum</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  excepturi, ut possimus animi non laborum maiores corrupti
-                  fugiat repudiandae? Quaerat, quis. Necessitatibus qui aliquid
-                  quod iste impedit saepe nesciunt! Obcaecati aperiam, omnis rem
-                  ipsam ipsum.
-                </p>
-                <div class="image-right">
-                  <a href="#who-we-are"><img src="media/ad.png" alt="advertise" /></a>
-                </div>
-              </article>
-              <article class="sidebar">
-                <h3>Lorem ipsum</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Suscipit illo porro totam quae accusantium expedita voluptas
-                  nihil repellendus cum. Quia nisi minima illo provident
-                  officia, quaerat, magnam qui omnis esse expedita eum fuga
-                  magni dicta ips.impedit saepe nesciunt!
-                </p>
-              </article>
-            </aside>
-          </section>
-        </section>
-      </section>
+        </article>
+      </aside>
+    </section>
+  </section>
+</section>
 
       <section id="services">
         <h2>Our Services</h2>
@@ -333,9 +333,12 @@
         Rights Reserved.
       </p>
     </footer>
-
     <script src="./js/validacioFormulari.js"></script>
+
+    <script src="./js/menu-dropdown.js"></script>
+    <script src="./js/acordeon-content.js"></script>
     <script src="./js/elmundotoday.js"></script>
+  
 
   </body>
-</html>
+</html> 
