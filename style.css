@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   max-width: 1024px;
@@ -491,9 +495,45 @@ footer {
   text-align: end;
   padding: 10px;
 }
+
 footer a {
   color: white;
+
 }
+
+
+
+
+
+/* Estils night mode */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+.dark {
+  --bg-color: #2c2c2c;
+  --text-color: #ffffff;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.35s, color 0.35s;
+  font-family: Arial, sans-serif;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;*/
+}
+#toggleBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* FI Estils night mode */
+
+
 
 
 /* Estils per al menú hamburguesa */
