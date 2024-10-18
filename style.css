@@ -218,9 +218,10 @@ aside p {
   border-radius: 50%;
   background-color: white;
   border: grey solid 5px;
-  width: 100%;
   min-width: 80px;
+  width: 80px;
   height: 80px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -336,9 +337,9 @@ h3 {
 }
 
 .form-container {
-  background: url(map-image1.png) no-repeat center center / cover;
+  background: url(media/map-image.png) no-repeat center center / cover;
   background-size: cover;
-  background-color: #75639a;
+  background-color: #8d8d8d;
   color: white;
   padding: 10px;
   gap: 20px;
@@ -456,7 +457,7 @@ textarea.success {
 
 /* Mensajes de error */
 .error-message {
-  color: rgb(87, 5, 5);
+  color: #c60b0b;
   font-size: 12px;
   position: absolute; /* Col·loca el missatge d'error sota l'input sense modificar el layout */
   bottom: -20px; /* Ajusta la posició del missatge just a sota de l'input */
@@ -487,6 +488,12 @@ textarea.error + .error-message {
   text-align: center;
 }
 
+#response-message {
+  background-color: #5c5a5a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 .hidden {
   display: none;
 }
@@ -537,7 +544,6 @@ footer a {
   text-align: justify;
 }
 .dark .form-container {
-  background: none;
   background-color: #3c3c3c;
   color: #f9f9f9;
 }
@@ -563,8 +569,6 @@ footer a {
   color: #7760ad;
   background-color: #333;
   border-color: #333;
-  width: 80px;
-  height: 80px;
 }
 /* FI Estils night mode */
 
@@ -576,6 +580,52 @@ footer a {
   color: #ccc;
   padding: 15px;
   background-color: #573077;
+}
+
+/* Portfolio */
+.container-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.loader::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Estils responsius */
@@ -711,12 +761,14 @@ footer a {
 @media screen and (max-width: 768px) {
   header h1 {
     font-size: 2em;
-    max-width: 90%;
+    padding: 0 10px;
   }
   h2 {
     font-size: 1.6em;
     text-align: left;
+    padding: 0 10px;
   }
+
   nav ul {
     display: none; /* Amaga la navegació per defecte */
     flex-direction: column;
@@ -724,6 +776,10 @@ footer a {
     position: absolute; /* Sobreposa el menú */
     background-color: #333; /* Color de fons */
     z-index: 1000;
+  }
+  #location h2,
+  h3 {
+    text-align: left;
   }
 
   nav ul.show {
@@ -756,10 +812,11 @@ footer a {
     width: 100%; /* Ample complet a les pantalles petites */
     border-right: none; /* Elimina el marge a les pantalles petites */
     margin-left: 0; /* Reinicia el marge */
+    padding: 0;
   }
 
-  .side {
-    padding-bottom: 20px; /* Afegeix espai entre seccions */
+  .sidebar img {
+    max-width: 200px;
   }
 
   .service-item i {
@@ -784,10 +841,9 @@ footer a {
   .location-container {
     flex-direction: column; /* Apila els elements verticalment */
     height: auto; /* Permet que l'alçada s'ajusti segons el contingut */
-    margin-left: 10px; /* Redueix els marges laterals */
-    margin-right: 10px;
+    margin: 0;
+    padding: 0 25px;
   }
-
   #location h2 {
     font-size: 1.8em; /* Redueix la mida de la font del títol */
   }
@@ -810,6 +866,8 @@ footer a {
   .location-details {
     margin-left: 0; /* Eliminar el marge per a millor alineació */
     text-align: center; /* Centrar el text */
+    max-width: 80%;
+    margin: auto;
   }
 
   .address {
@@ -828,5 +886,8 @@ footer a {
   form button {
     width: 90%;
     margin-left: 0;
+  }
+  footer {
+    text-align: center;
   }
 }
