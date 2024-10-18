@@ -174,17 +174,47 @@
         <h2>Portfolio</h2>
         <h3>There are success project created by us</h3>
         <article class="portfolio-container">
-          <img src="media/2.jpg" alt="rainy" />
-          <img src="media/3.jpg" alt="cup of tea" />
-          <img src="media/4.jpg" alt="lights" />
-          <img src="media/5.jpg" alt="reading book" />
-          <img src="media/6.jpg" alt="sit alone" class="image-rotate" />
-          <img src="media/7.jpg" alt="nuts" />
-          <img src="media/8.jpg" alt="in the box" />
-          <img src="media/9.jpg" alt="cookies" />
-          <img src="media/10.jpg" alt="shampoo" />
+          <img class="lazy-load" data-src="media/2.jpg" alt="rainy" />
+          <img class="lazy-load" data-src="media/3.jpg" alt="cup of tea" />
+          <img class="lazy-load" data-src="media/4.jpg" alt="lights" />
+          <img class="lazy-load" data-src="media/5.jpg" alt="reading book" />
+          <img class="lazy-load" data-src="media/6.jpg" alt="sit alone" class="image-rotate" />
+          <img class="lazy-load" data-src="media/7.jpg" alt="nuts" />
+          <img class="lazy-load" data-src="media/8.jpg" alt="in the box" />
+          <img class="lazy-load" data-src="media/9.jpg" alt="cookies" />
+          <img class="lazy-load" data-src="media/10.jpg" alt="shampoo" />
         </article>
       </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          let lazyloadImages = document.querySelectorAll("img.lazy-load");
+          let lazyloadThrottleTimeout;
+  
+          function lazyload() {
+            if(lazyloadThrottleTimeout) {
+              clearTimeout(lazyloadThrottleTimeout);
+            }
+            lazyloadThrottleTimeout = setTimeout(function() {
+              let scrollTop = window.pageYOffset;
+              lazyloadImages.forEach(function(img) {
+                if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                  img.src = img.dataset.src;
+                  img.classList.remove('lazy');
+                }
+              });
+              if(lazyloadImages.length == 0) {
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+              }
+            }, 20);
+          }
+          document.addEventListener("scroll", lazyload);
+          window.addEventListener("resize", lazyload);
+          window.addEventListener("orientationChange", lazyload);
+        });
+      </script>
 
       <section id="news">
         <h2>Noticies</h2>
@@ -201,7 +231,7 @@
 
 
 
-      <section id="humor">
+      <section id="humor" class="lazy-load">
         <h2>Humor</h2>
         <h3>Chiste del dia:</h3>
         <article class="portfolio-container">
